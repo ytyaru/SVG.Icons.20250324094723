@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!--
+<font id="icomoon" horiz-adv-x="1024">
+<font-face units-per-em="1024" ascent="960" descent="-64" />
+<missing-glyph horiz-adv-x="1024" />
+-->
+<font id="icomoon" horiz-adv-x="256">
+<font-face units-per-em="256" ascent="240" descent="-16" />
+<missing-glyph horiz-adv-x="1024" />
+<glyph unicode="&#x20;" horiz-adv-x="128" d="" />
+<glyph unicode="&#xe900;" glyph-name="clipboard" d="M80.08 8.04h95.84v56.658H80.08ZM45.04 36.488V247.96h165.92V36.488h-35.04v28.21H80.08v-28.21Z" />
+</font></defs></svg>
