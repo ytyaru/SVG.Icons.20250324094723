@@ -1,0 +1,97 @@
+<html>
+<body>
+
+<select id="color-scheme">
+    <option value="light">Light</option>
+    <option value="dark">Dark</option>
+</select>
+<script>
+document.querySelector('#color-scheme').addEventListener('change', async(e)=>{
+    console.log(e.target.value)
+    const N = e.target.value;
+    const O = 'dark'===N ? 'light' : 'dark';
+    document.documentElement.classList.replace(O, N);
+    const S = document.querySelector(':root').style;
+    if ('dark'===e.target.value) {
+        S.setProperty('--fg-color', '#fff');
+        S.setProperty('--bg-color', '#000');
+    } else {
+        S.setProperty('--fg-color', '#000');
+        S.setProperty('--bg-color', '#fff');
+    }
+});
+document.documentElement.classList.add('light');
+</script>
+
+<style>
+:root {
+    --fg-color:#000;
+    --bg-color:#fff;
+}
+.icon {
+    position: relative;
+    top:0; left:0;
+    width:1em; height:1em;
+    fill: currentColor;
+    stroke: currentColor;
+    display: inline-block;
+}
+/*
+.dark {color:#fff; background-color:#000;}
+.light {color:#000; background-color:#fff;}
+*/
+* {
+    color: var(--fg-color);
+    background-color: var(--bg-color);
+}
+button, input, select, option, textarea, fieldset, legend, label {
+    color: var(--fg-color);
+    background-color: var(--bg-color);
+}
+</style>
+<!--
+-->
+<svg class="icon"><use href="./sprite.svg#clipboard"></use></svg>
+<svg class="icon"><use href="./svg/sprite.svg#clipboard"></use></svg>
+
+<svg class="icon"><use xlink:href="./sprite.svg#clipboard"></use></svg>
+<svg class="icon"><use xlink:href="./svg/sprite.svg#clipboard"></use></svg>
+  
+
+<svg class="icon">
+  <use xlink:href="./sprite.svg#clipboard"></use>
+</svg><svg class="icon">
+  <use xlink:href="./sprite.svg#download"></use>
+</svg><svg class="icon">
+  <use xlink:href="./sprite.svg#eye"></use>
+</svg><svg class="icon">
+  <use xlink:href="./sprite.svg#eye-closed"></use>
+</svg><svg class="icon">
+  <use xlink:href="./sprite.svg#file"></use>
+</svg><svg class="icon">
+  <use xlink:href="./sprite.svg#fullscreen"></use>
+</svg><svg class="icon">
+  <use xlink:href="./sprite.svg#fullscreen-exit"></use>
+</svg><svg class="icon">
+  <use xlink:href="./sprite.svg#pen"></use>
+</svg><svg class="icon">
+  <use xlink:href="./sprite.svg#upload"></use>
+</svg>
+
+<ruby style="ruby-position:under;">
+    <svg class="icon"><use xlink:href="./sprite.svg#clipboard"></use></svg>
+    <rt>COPY</rt>
+</ruby>
+
+<button>
+    <ruby style="ruby-position:under;">
+        <svg class="icon"><use xlink:href="./sprite.svg#clipboard"></use></svg>
+        <rt>COPY</rt>
+    </ruby>
+</button>
+
+<button><svg class="icon"><use xlink:href="./sprite.svg#clipboard"></use></svg></button>
+
+</body>
+</html>
+
