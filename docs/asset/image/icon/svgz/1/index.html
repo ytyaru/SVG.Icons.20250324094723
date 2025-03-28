@@ -1,0 +1,65 @@
+<html>
+<meta charset="utf-8">
+<style>
+:root {
+    --fg-color:#000;
+    --bg-color:#fff;
+}
+.icon {
+    position: relative;
+    top:0; left:0;
+    width:1em; height:1em;
+    fill: currentColor;
+    stroke: currentColor;
+    display: inline-block;
+}
+/*
+.dark {color:#fff; background-color:#000;}
+.light {color:#000; background-color:#fff;}
+*/
+* {
+    color: var(--fg-color);
+    background-color: var(--bg-color);
+}
+button, input, select, option, textarea, fieldset, legend, label {
+    color: var(--fg-color);
+    background-color: var(--bg-color);
+}
+</style>
+<body>
+<h1>外部参照</h1>
+    <img src="./clipboard-new-slim.svg"></img>
+    <img src="./clipboard-new-slim-inkscape.svgz"></img>
+    <img src="./clipboard-new-slim-luft-tool.svgz"></img>
+
+    <picture>
+      <source srcset="./clipboard-new-slim-luft-tool.svgz" />
+      <img src="./clipboard-new-slim.svg">
+    </picture>
+
+    <img src="./clipboard-new-slim.svg" width="16px" height="16px"></img>
+    <img src="./clipboard-new-slim.svgz" width="16px" height="16px"></img>
+
+    <img src="./clipboard-new-slim.svg" width="1em" height="1em"></img>
+    <img src="./clipboard-new-slim.svgz" width="1em" height="1em"></img>
+
+    <img src="./clipboard-new-slim.svg" class="icon"></img>
+    <img src="./clipboard-new-slim.svgz" class="icon"></img>
+
+    <svg class="icon"><use xlink:href="./clipboard-new-slim.svg"></svg>
+    <svg class="icon"><use xlink:href="./clipboard-new-slim.svgz"></svg>
+
+    <svg class="icon"><use href="./clipboard-new-slim.svg"></svg>
+    <svg class="icon"><use href="./clipboard-new-slim.svgz"></svg>
+
+    <svg class="icon"><use xlink:href="./clipboard-new-slim.svg#clipboard"></svg>
+    <svg class="icon"><use xlink:href="./clipboard-new-slim.svgz#clipboard"></svg>
+
+    <svg class="icon"><use href="./clipboard-new-slim.svg#clipboard"></svg>
+    <svg class="icon"><use href="./clipboard-new-slim.svgz#clipboard"></svg>
+<h1>インライン</h1>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="256" height="256" viewBox="0 0 256 256"><path style="fill:currentColor;" d="M72.51 0A8.51 8.51 0 0 0 64 8.51v10.98H28A8.51 8.51 0 0 0 19.49 28v220a8.51 8.51 0 0 0 8.51 8.51h200a8.51 8.51 0 0 0 8.51-8.51V28a8.51 8.51 0 0 0-8.51-8.51h-36V8.51A8.51 8.51 0 0 0 183.49 0Zm8.51 17.02h93.96v29.96H81.02V28ZM36.51 36.51H64v18.98a8.51 8.51 0 0 0 .043.85 8.51 8.51 0 0 0 .127.842 8.51 8.51 0 0 0 .502 1.623 8.51 8.51 0 0 0 .814 1.49 8.51 8.51 0 0 0 .516.678 8.51 8.51 0 0 0 1.219 1.183 8.51 8.51 0 0 0 1.43.918 8.51 8.51 0 0 0 .777.348 8.51 8.51 0 0 0 1.636.455A8.51 8.51 0 0 0 72.51 64h110.98a8.51 8.51 0 0 0 1.692-.17 8.51 8.51 0 0 0 1.623-.502 8.51 8.51 0 0 0 .765-.371 8.51 8.51 0 0 0 .725-.443 8.51 8.51 0 0 0 2.355-2.426 8.51 8.51 0 0 0 1.04-2.322 8.51 8.51 0 0 0 .31-2.276V36.51h27.49v202.98H36.51Z"/></svg>
+
+</body>
+</html>
+
